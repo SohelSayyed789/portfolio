@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact me</title>
+  <style>
+    .navbar {
+      background-color: #fff;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding: 10px 40px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(141, 133, 18, 0.1);
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0d5749;
+    }
+
+    .navbar a {
+      color: black;
+      padding-left: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar a.active {
+      color: green;
+    }
+
+    form input, form textarea {
+      width: 300px;
+      padding: 14px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Portfolio</div>
+    <div>
+      <a href="portfolio.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="active">Contact Me</a>
+    </div>
+  </div>
+
+  <center>
+    <h1 style="text-decoration: underline;">Contact Me</h1>
+    <form id="whatsappform" onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" name="name" placeholder="Your name" required><br>
+      <input type="email" id="email" name="email" placeholder="Your email" required><br>
+      <textarea id="message" name="message" placeholder="Your message" required></textarea><br>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </center>
+
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      var whatsappnumber = "919370363879"; // Replace with your number
+      var url = "https://wa.me/" + whatsappnumber + "?text="
+        + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message);
+
+      window.open(url, '_blank').focus();
+    }
+  </script>
+</body>
+</html>

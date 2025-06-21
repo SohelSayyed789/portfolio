@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .navbar {
+      background-color: #fff;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding: 10px 40px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(141, 133, 18, 0.1);
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0d5749;
+    }
+
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: underline;
+      color: black;
+      font-weight: bold;
+    }
+
+    .navbar a.active {
+      color: green;
+    }
+
+    .navbar a:hover {
+      color: darkorange;
+    }
+
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content h1 {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .skill-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      width: 200px;
+      background-color: white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .skill-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    .skill-card p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #0d5749;
+      font-size: 18px;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Portfolio</div>
+    <div>
+      <a href="portfolio.html">Home</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>My Skills</h1>
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="html5.jpg" alt="HTML5">
+        <p>HTML5</p>
+      </div>
+      <div class="skill-card">
+        <img src="css.jpg" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill-card">
+        <img src="javascript.png" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <img src="c.jpg" alt="C">
+        <p>C</p>
+      </div>
+      <div class="skill-card">
+        <img src="cpp.jpg" alt="C++">
+        <p>C++</p>
+      </div>
+      <div class="skill-card">
+        <img src="java.jpg" alt="Java">
+        <p>Java</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
